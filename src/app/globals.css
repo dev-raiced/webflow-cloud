@@ -1,0 +1,20 @@
+/* If you want tailwind 'base' styles to override 'webflow' styles, re-order the layers */
+@layer properties, theme, base, webflow, components, utilities;
+
+/* Webflow global styles are imported in the 'webflow' layer */
+@import '../devlink/global.css' layer(webflow);
+@import 'tailwindcss';
+
+/* 
+  Override the default white background from Webflow's global stylesheet
+*/
+body {
+  background-color: var(--lj-cream);
+}
+
+.main-wrapper {
+  padding: 3rem 1rem;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
