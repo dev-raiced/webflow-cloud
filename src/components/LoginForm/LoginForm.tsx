@@ -2,6 +2,11 @@
 
 import React, { useState } from 'react';
 import {Card } from '../../devlink/Card';
+
+type LoginResponse = {
+  error?: string;
+};
+
 const LoginForm: React.FC = () => {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
@@ -20,13 +25,13 @@ const LoginForm: React.FC = () => {
         body: JSON.stringify({ user, password }),
       });
 
-      const data = await res.json();
+    const data = (await res.json()) as LoginResponse;
 
       if (res.ok) {
         // handle successful login (e.g., redirect, show message)
         alert('Login successful!');
       } else {
-        setError(data.error || 'Login failed');
+        setError(data?.error ?? 'Login failed');
       }
     } catch {
       setError('Network error');

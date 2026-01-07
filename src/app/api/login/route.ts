@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export const POST = async (req: NextRequest) => {
   const body = await req.json();
-  const { user, password } = body;
+  const { user, password } : any = body;
 
   try {
     const response = await fetch(`https://${process.env.API_URL}/login`, {
