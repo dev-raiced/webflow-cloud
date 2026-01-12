@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`webflow clou
 
 Webflow is a very good platform to create a website. In the recent months, they started to include more and more coding features. I'm going to present my two favorites below with different use cases.
 
-/!\ **Webflow limitation: GitHub repo is mandatory for Webflow Cloud** /!\
+⚠️ **Webflow limitation: GitHub repo is mandatory for Webflow Cloud** ⚠️
 
 ## Use case: user account management, complex e-commerce,...
 For my case, I'm going to present the user account management. It's not a native feature from webflow and we cannot blame them for it it usually have differents requirements for each companies. Usually this kind of subwebsite run in a different platofm and different subdomain in order to handle the end to end flow including localStorage, cookies,...
